@@ -1,0 +1,191 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Montserrat",sans-serif;
+}
+
+body{
+  background:#070707;
+  color:#fff;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+/* smooth scrolling */
+html{
+  scroll-behavior:smooth;
+}
+
+/* ===== PREMIUM NAVBAR ===== */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:18px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(10,10,10,0.6);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,215,0,0.08);
+  z-index:999;
+}
+
+.logo{
+  font-size:18px;
+  font-weight:800;
+  letter-spacing:2px;
+  color:gold;
+}
+
+nav a{
+  margin-left:18px;
+  font-size:13px;
+  text-decoration:none;
+  color:#aaa;
+  position:relative;
+}
+
+nav a:hover{
+  color:gold;
+}
+
+/* underline animation */
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  height:1px;
+  background:gold;
+  transition:.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* ===== HERO (VERY IMPORTANT UPGRADE) ===== */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 8%;
+  background:
+    radial-gradient(circle at top,#1a1a1a 0%,#070707 60%);
+}
+
+.hero h1{
+  font-size:64px;
+  font-weight:800;
+  color:gold;
+  letter-spacing:1px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  max-width:650px;
+  margin:0 auto;
+  color:#bdbdbd;
+  font-size:16px;
+}
+
+/* CTA BUTTON */
+.btn{
+  margin-top:18px;
+  padding:12px 22px;
+  background:gold;
+  border:none;
+  color:#000;
+  font-weight:700;
+  border-radius:6px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 30px rgba(255,215,0,0.2);
+}
+
+/* ===== SECTIONS ===== */
+section{
+  padding:100px 10%;
+}
+
+h2{
+  font-size:28px;
+  margin-bottom:25px;
+  color:gold;
+}
+
+/* ===== GRID SYSTEM ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+
+/* ===== CARDS (BIG UPGRADE) ===== */
+.card{
+  background:linear-gradient(145deg,#111,#0a0a0a);
+  border:1px solid #1f1f1f;
+  padding:22px;
+  border-radius:14px;
+  transition:.4s;
+  position:relative;
+  overflow:hidden;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(255,215,0,0.4);
+}
+
+/* glow effect */
+.card::before{
+  content:"";
+  position:absolute;
+  width:200%;
+  height:200%;
+  background:radial-gradient(circle,rgba(255,215,0,0.08),transparent 60%);
+  top:-50%;
+  left:-50%;
+  opacity:0;
+  transition:.4s;
+}
+
+.card:hover::before{
+  opacity:1;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:25px;
+  border-top:1px solid #1a1a1a;
+  color:#777;
+}
+
+/* ===== WHATSAPP BUTTON ===== */
+.whatsapp{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  background:linear-gradient(135deg,#25D366,#1fae54);
+  color:#fff;
+  padding:14px 16px;
+  border-radius:50px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 10px 30px rgba(37,211,102,0.25);
+  transition:.3s;
+}
+
+.whatsapp:hover{
+  transform:scale(1.08);
+}
